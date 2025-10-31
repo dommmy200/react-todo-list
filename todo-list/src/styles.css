@@ -62,3 +62,41 @@ body {
 .list li:has(input:checked) label:hover::before {
     background: hsl(200, 100%, 30%);
 }
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* keeps label left, button right */
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.list li label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.list li label::before {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+  background: hsl(200, 100%, 90%);
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Keep your other styles below as-is */
+.list li:has(input:checked) label::before {
+  content: "✔️";
+  background: hsl(200, 100%, 40%);
+  color: hsl(200, 100%, 90%);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.list li:has(input:checked) label:hover::before {
+  background: hsl(200, 100%, 30%);
+}
