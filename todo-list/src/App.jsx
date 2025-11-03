@@ -17,10 +17,10 @@ export default function App() {
 
   function addTodo(title) {
     setTodo(currentTodo => {
-    return [
+      return [
         ...currentTodo,
         { id: crypto.randomUUID(), title, completed: false },
-    ]
+      ]
     })
   }
 
@@ -37,6 +37,7 @@ export default function App() {
       }
     )
   }
+
   function deleteTodo(id) {
     setTodo(currentTodos => {
       return currentTodos.filter(todo => todo.id !== id)
