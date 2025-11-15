@@ -6,10 +6,5 @@
       "use": "@vercel/next"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "next-js-pjt/nextjs-dashboard/$1"
-    }
-  ]
+  "outputDirectory": "next-js-pjt/nextjs-dashboard/.next"
 }
